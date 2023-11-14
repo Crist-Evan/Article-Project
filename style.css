@@ -136,7 +136,7 @@ body {
 .container {
   background-color: #dddddd;
   margin: auto;
-  width: 600px;
+  width: 960px;
 }
 
 .container .header {
@@ -163,30 +163,59 @@ body {
 }
 
 .container .images {
-  height: 300px;
+  height: 350px;
   background-image: url(Images/news.jpg);
   background-size: cover;
-  background-position: 0 0;
+  background-position: 0 -40px;
+  background-repeat: no-repeat;
   border-top: 3px solid tomato;
   border-bottom: 3px solid blue;
 }
 
-.container .content .title {
+.container .content .main-content {
+  width: 600px;
+  float: left;
+}
+
+.container .content .main-content .title {
   font-size: 20px;
   font-weight: 700;
 }
 
-.container .content .metadata {
+.container .content .main-content .metadata {
   margin-top: -20px;
 }
 
-.container .content .metadata a {
+.container .content .main-content .metadata a {
   color: blue;
   text-decoration: none;
 }
 
-.container .content p {
-  margin: 20px 20px 20px;
+.container .content .main-content p {
+  margin: 20px;
+}
+
+.container .content .sidebar {
+  width: 300px;
+  float: right;
+}
+
+.container .content .sidebar .title {
+  color: #666;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.container .content .sidebar img {
+  margin: 5px 10px 5px 20px;
+  height: 70px;
+  width: 70px;
+  float: left;
+}
+
+.container .content .sidebar p {
+  margin: 20px;
+  font: 12px/20px arial;
 }
 
 .container .footer {
@@ -196,4 +225,19 @@ body {
 
 .container .footer p {
   text-align: center;
+}
+
+/*clearfix*/
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
 }
