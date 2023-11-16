@@ -136,7 +136,30 @@ body {
 .container {
   background-color: #dddddd;
   margin: auto;
+  margin-top: 60px;
   width: 960px;
+  position: relative;
+}
+
+.container .search {
+  height: 40px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9999;
+}
+
+.container .youtube {
+  height: 50px;
+  width: 100px;
+  display: inline-block;
+  background-image: url(Images/ytbanner.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  position: absolute;
+  right: -7px;
 }
 
 .container .header {
